@@ -1,0 +1,127 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__content-grid {
+    display: grid;
+    gap: 0;
+    justify-content: center;
+    max-width: 1000px;
+    margin-inline: auto;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6.75rem;
+    }
+
+    @media (max-width: 55em) {
+      margin: 0 2.25rem 0 2.25rem;
+    }
+  }
+
+  &__info {
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+
+    @media (min-width: 40em) {
+      order: 1;
+    }
+  }
+
+  &__main-text {
+    margin-bottom: auto;
+    margin-block-end: 2rem;
+    margin-block-start: 6.25rem;
+    font-size: 4.25rem;
+
+    @media (width < 40em) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 55em) {
+      font-size: 2.25rem;
+      padding: 0 1rem 0 1rem;
+      margin-block-start: 3rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  &__sub-text {
+    font-size: 1.1rem;
+    color: var(--clr-almost-gray);
+    margin-block-end: 3rem;
+    line-height: 1.5rem;
+
+    @media (width < 40em) {
+      text-align: center;
+      font-size: 1rem;
+      padding: 0 1.5rem 0 1.5rem;
+      margin-block-end: 1.5rem;
+      line-height: 1.35rem;
+    }
+  }
+
+  &__learn-btn {
+    margin-inline-end: auto;
+    background: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border: 1px solid var(--clr-almost-black);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+
+    @media (width < 40em) {
+      margin: auto;
+      margin-block-end: 2rem;
+    }
+  }
+
+  &__learn-btn:hover {
+    background: var(--clr-almost-black);
+    color: var(--clr-almost-white);
+  }
+
+  &__client-grid {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 2rem;
+
+    @media (max-width: 35em) {
+      margin: 0 1.5rem 0 1.5rem;
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  &__img-container {
+    order: 1;
+
+    @media (min-width: 40em) {
+      order: 2;
+    }
+
+    img {
+      width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  @media (width < 500px) {
+    &__img-container {
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+}
